@@ -10,7 +10,7 @@ from django.dispatch import receiver
 
 class Profile(models.Model):
 	user = models.OneToOneField(User, on_delete=models.CASCADE)
-	age = models.PositiveSmallIntegerField(blank=True)
+	age = models.PositiveSmallIntegerField(blank=True, null=True)
 	#can_drink = models.BooleanField()
 
 	def can_drink(self):
